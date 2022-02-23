@@ -196,7 +196,7 @@ def put_s_des(s, k, t, r, d, v, c=1, n=1000):
     for i in range(n):
         y.append(put_bs(s+c*i, k, t, r, d, v))
 
-    plt.plot(x,y)
+    plt.plot(x,y,'r')
     plt.title('Put price vs. Stock price')
     plt.xlabel('stock price')
     plt.ylabel('put price')
@@ -215,7 +215,7 @@ def put_k_des(s, k, t, r, d, v, c=0.03, n=1000):
     for i in range(n):
         y.append(put_bs(s, k+c*i, t, r, d, v))
 
-    plt.plot(x,y)
+    plt.plot(x,y,'r')
     plt.title('Put price vs. Strike price')
     plt.xlabel('strike price')
     plt.ylabel('put price')
@@ -234,7 +234,7 @@ def put_t_des(s, k, t, r, d, v, c=0.5, n=1000):
     for i in range(n):
         y.append(put_bs(s, k, t+c*i, r, d, v))
 
-    plt.plot(x,y)
+    plt.plot(x,y,'r')
     plt.title('Put price vs. Time to maturity')
     plt.xlabel('time to maturity')
     plt.ylabel('put price')
@@ -253,7 +253,7 @@ def put_r_des(s, k, t, r, d, v, c=0.0002, n=1000):
     for i in range(n):
         y.append(put_bs(s, k, t, r+c*i, d, v))
 
-    plt.plot(x,y)
+    plt.plot(x,y,'r')
     plt.title('Put price vs. Risk-free rate')
     plt.xlabel('risk-free rate')
     plt.ylabel('put price')
@@ -272,7 +272,7 @@ def put_d_des(s, k, t, r, d, v, c=0.0001, n=1000):
     for i in range(n):
         y.append(put_bs(s, k, t, r, d+c*i, v))
 
-    plt.plot(x,y)
+    plt.plot(x,y,'r')
     plt.title('Put price vs. Dividend yield')
     plt.xlabel('dividend yield')
     plt.ylabel('put price')
@@ -291,7 +291,7 @@ def put_v_des(s, k, t, r, d, v, c=0.001, n=1000):
     for i in range(n):
         y.append(put_bs(s, k, t, r, d, v+c*i))
 
-    plt.plot(x,y)
+    plt.plot(x,y,'r')
     plt.title('Put price vs. Volatility')
     plt.xlabel('volatility')
     plt.ylabel('put price')
