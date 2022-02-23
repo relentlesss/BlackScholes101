@@ -1,6 +1,6 @@
 # BlackScholes101
 
-Call and Put option pricing using the Black-Scholes model.
+Call and Put option pricing functions using the Black-Scholes model.
 
 Plot change in option price with respect to change in parameter (partial change).
 
