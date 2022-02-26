@@ -3,13 +3,13 @@ from matplotlib import pyplot as plt
 import numpy as np
 from blackfunc import *
 
-# plot call price vs. stock price
+# Plot call price vs. stock price
 def call_s_des(s, k, t, r, d, v, c=1, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(s,s+c*(n),c)
 
     y = []
@@ -22,13 +22,13 @@ def call_s_des(s, k, t, r, d, v, c=1, n=1000):
     plt.ylabel('call price')
     plt.show()
 
-# plot call price vs. strike price
+# Plot call price vs. strike price
 def call_k_des(s, k, t, r, d, v, c=0.03, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(k,k+c*(n),c)
 
     y = []
@@ -41,13 +41,13 @@ def call_k_des(s, k, t, r, d, v, c=0.03, n=1000):
     plt.ylabel('call price')
     plt.show()
 
-# plot call price vs. time to maturity
+# Plot call price vs. time to maturity
 def call_t_des(s, k, t, r, d, v, c=0.5, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(t,t+c*(n),c)
 
     y = []
@@ -60,13 +60,13 @@ def call_t_des(s, k, t, r, d, v, c=0.5, n=1000):
     plt.ylabel('call price')
     plt.show()
 
-# plot call price vs. risk-free rate
+# Plot call price vs. risk-free rate
 def call_r_des(s, k, t, r, d, v, c=0.0002, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(r,r+c*(n),c)
 
     y = []
@@ -79,13 +79,13 @@ def call_r_des(s, k, t, r, d, v, c=0.0002, n=1000):
     plt.ylabel('call price')
     plt.show()
 
-# plot call price vs. dividend yiel
+# Plot call price vs. dividend yiel
 def call_d_des(s, k, t, r, d, v, c=0.0001, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(d,d+c*(n),c)
 
     y = []
@@ -98,13 +98,13 @@ def call_d_des(s, k, t, r, d, v, c=0.0001, n=1000):
     plt.ylabel('call price')
     plt.show()
 
-# plot call price vs. volatility
+# Plot call price vs. volatility
 def call_v_des(s, k, t, r, d, v, c=0.001, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(v,v+c*(n),c)
 
     y = []
@@ -117,14 +117,14 @@ def call_v_des(s, k, t, r, d, v, c=0.001, n=1000):
     plt.ylabel('call price')
     plt.show()
 
-# plot call price vs. all default parameters
+# Plot call price vs. all default parameters
 def call_des(s, k, t, r, d, v):
 
-    # initialize default parameters
+    # Initialize default parameters
     c = [1,0.03,0.5,0.0002,0.0001,0.001]
     n = 1000
 
-    # compute x values
+    # Compute x values
     x1 = np.arange(s,s+c[0]*(n),c[0])
     x2 = np.arange(k,k+c[1]*(n),c[1])
     x3 = np.arange(t,t+c[2]*(n),c[2])
@@ -132,7 +132,7 @@ def call_des(s, k, t, r, d, v):
     x5 = np.arange(d,d+c[4]*(n),c[4])
     x6 = np.arange(v,v+c[5]*(n),c[5])
 
-    # compute y values
+    # Compute y values
     y1 = []
     for i in range(n):
         y1.append(call_bs(s+c[0]*i, k, t, r, d, v))
@@ -179,17 +179,17 @@ def call_des(s, k, t, r, d, v):
     axis[1, 2].plot(x6,y6)
     axis[1, 2].set_title('Call p vs. Volatility')
 
-    # output clean fig
+    # Output clean fig
     fig.tight_layout()
     plt.show()
 
-# plot put price vs. stock price
+# Plot put price vs. stock price
 def put_s_des(s, k, t, r, d, v, c=1, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(s,s+c*(n),c)
 
     y = []
@@ -202,13 +202,13 @@ def put_s_des(s, k, t, r, d, v, c=1, n=1000):
     plt.ylabel('put price')
     plt.show()
 
-# plot put price vs. strike price
+# Plot put price vs. strike price
 def put_k_des(s, k, t, r, d, v, c=0.03, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(k,k+c*(n),c)
 
     y = []
@@ -221,13 +221,13 @@ def put_k_des(s, k, t, r, d, v, c=0.03, n=1000):
     plt.ylabel('put price')
     plt.show()
 
-# plot put price vs. time to maturity
+# Plot put price vs. time to maturity
 def put_t_des(s, k, t, r, d, v, c=0.5, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(t,t+c*(n),c)
 
     y = []
@@ -240,13 +240,13 @@ def put_t_des(s, k, t, r, d, v, c=0.5, n=1000):
     plt.ylabel('put price')
     plt.show()
 
-# plot put price vs. risk-free rate
+# Plot put price vs. risk-free rate
 def put_r_des(s, k, t, r, d, v, c=0.0002, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(r,r+c*(n),c)
 
     y = []
@@ -259,13 +259,13 @@ def put_r_des(s, k, t, r, d, v, c=0.0002, n=1000):
     plt.ylabel('put price')
     plt.show()
 
-# plot put price vs. dividend yield
+# Plot put price vs. dividend yield
 def put_d_des(s, k, t, r, d, v, c=0.0001, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(d,d+c*(n),c)
 
     y = []
@@ -278,13 +278,13 @@ def put_d_des(s, k, t, r, d, v, c=0.0001, n=1000):
     plt.ylabel('put price')
     plt.show()
 
-# plot put price vs. volatility
+# Plot put price vs. volatility
 def put_v_des(s, k, t, r, d, v, c=0.001, n=1000):
 
-    # number of obs
+    # Number of obs
     n = 1000
 
-    # compute x and y data
+    # Compute x and y data
     x = np.arange(v,v+c*(n),c)
 
     y = []
@@ -297,14 +297,14 @@ def put_v_des(s, k, t, r, d, v, c=0.001, n=1000):
     plt.ylabel('put price')
     plt.show()
 
-# plot put price vs. all default parameters
+# Plot put price vs. all default parameters
 def put_des(s, k, t, r, d, v):
 
-    # initialize default parameters
+    # Initialize default parameters
     c = [1,0.03,0.5,0.0002,0.0001,0.001]
     n = 1000
 
-    # compute x values
+    # Compute x values
     x1 = np.arange(s,s+c[0]*(n),c[0])
     x2 = np.arange(k,k+c[1]*(n),c[1])
     x3 = np.arange(t,t+c[2]*(n),c[2])
@@ -312,7 +312,7 @@ def put_des(s, k, t, r, d, v):
     x5 = np.arange(d,d+c[4]*(n),c[4])
     x6 = np.arange(v,v+c[5]*(n),c[5])
 
-    # compute y values
+    # Compute y values
     y1 = []
     for i in range(n):
         y1.append(put_bs(s+c[0]*i, k, t, r, d, v))
@@ -359,6 +359,6 @@ def put_des(s, k, t, r, d, v):
     axis[1, 2].plot(x6, y6, 'r')
     axis[1, 2].set_title('Put p vs. Volatility')
 
-    # output clean fig
+    # Output clean fig
     fig.tight_layout()
     plt.show()
